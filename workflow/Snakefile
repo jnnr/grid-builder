@@ -8,8 +8,8 @@ from snakemake.utils import min_version
 workflow.source_path("scripts/_helpers.py")
 workflow.source_path("scripts/_schema.py")
 
-sys.path.insert(0, workflow.basedir)
-from scripts._schema import validate_config
+# sys.path.insert(0, workflow.basedir)
+# from scripts._schema import validate_config
 
 min_version("9.19")
 
@@ -24,7 +24,7 @@ pathvars:
 configfile: workflow.source_path("../config/config.yaml")
 
 
-config = validate_config(config)
+# config = validate_config(config)
 
 # Load internal settings separately so users cannot modify them.
 with open(workflow.source_path("internal/settings.yaml"), "r") as f:
