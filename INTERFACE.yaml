@@ -1,4 +1,6 @@
 # Module Input-Output structure for automated docs generation
+convention_version: v1.0.0
+
 pathvars:
   snakemake_defaults:
     logs:
@@ -6,11 +8,10 @@ pathvars:
       description: location of snakemake log files.
     resources:
       default: "<resources>"
-      description: location of module resource files.
+      description: "location of module resource (input) files."
     results:
       default: "<results>"
-      description: location of module result files.
-  user_resources:
-    user_message:
-      default: "<resources>/user/user_message.md"
-      description: user-provided text input passed into the module.
+      description: "location of module result (output) files."
+wildcards:
+  country: Country name as ISO 3166-1 alpha-2 code.
+  feature: Feature, e.g. 'substation' or 'line'.

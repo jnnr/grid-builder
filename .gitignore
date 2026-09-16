@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: Contributors to grid-builder <https://github.com/pypsa/grid-builder
-#
-# SPDX-License-Identifier: MIT
-
 ### OS-specific
 .DS_Store
 
@@ -17,6 +13,7 @@ __pycache__
 
 ### Environments
 .pixi/
+!.pixi/.gitignore
 
 ### Snakemake
 .snakemake/
