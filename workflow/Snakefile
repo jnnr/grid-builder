@@ -4,6 +4,11 @@ from pathlib import Path
 import yaml
 from snakemake.utils import min_version
 
+# Load python files in scripts that are used in other scripts, but not run itself.
+# This is necessary for integrating the snakemake module via reference to GitHub.
+workflow.source_path("scripts/_helpers.py")
+workflow.source_path("scripts/_schema.py")
+
 sys.path.insert(0, workflow.basedir)
 from scripts._schema import load_region_configs, validate_config
 
