@@ -9,7 +9,6 @@ from snakemake.utils import min_version
 workflow.source_path("scripts/_helpers.py")
 workflow.source_path("scripts/_schema.py")
 
-sys.path.insert(0, workflow.basedir)
 from scripts._schema import load_region_configs, validate_config
 
 min_version("9.19")
