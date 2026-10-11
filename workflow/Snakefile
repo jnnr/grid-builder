@@ -29,6 +29,8 @@ with open(workflow.source_path("internal/settings.yaml"), "r") as f:
 # This is necessary for integrating the snakemake module via reference to GitHub.
 workflow.source_path("scripts/_helpers.py")
 workflow.source_path("scripts/_schema.py")
+workflow.source_path("internal/colors.yaml")
+workflow.source_path("internal/tag_corrections.yaml")
 
 
 include: "rules/retrieve.smk"
